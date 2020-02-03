@@ -2,6 +2,8 @@ import React from "react"
 
 import "./start-page.css"
 
+import {CanvasSpace, Pt, Group} from "pts"
+
 const StartPage = () => {
 
   return (
@@ -15,7 +17,12 @@ const StartPage = () => {
       >
         START PAGE
       </div> */}
-      <div className="my-content">MY CONTENT</div>
+      <div id="pt" className="my-content">
+        <div className="container">
+          <div className="item">Cześć, nazywam się <span style={{color: `#3d9df1`}}>Tomek</span></div>
+          <div className="item">Miło mi Ciebie tutaj gościć.</div>
+        </div>
+      </div>
     </>
   )
 }

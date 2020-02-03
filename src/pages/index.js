@@ -6,8 +6,15 @@ import Image from "../components/image"
 import SEO from "../components/seo"
 import StartPage from "../components/start-page/start-page"
 
+import Helmet from "react-helmet"
+import { withPrefix } from "gatsby"
+
 const IndexPage = () => (
   <Layout>
+    <Helmet>
+        {/* <script src={withPrefix('pts.min.js')} type="text/javascript" /> */}
+        {/* <script src={withPrefix('pts-animations.js')} type="text/javascript" /> */}
+    </Helmet>
     {/* <SEO title="Home" /> */}
     {/* <h1>Hi people</h1>
     <div>
