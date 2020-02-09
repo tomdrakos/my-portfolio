@@ -1,0 +1,75 @@
+.my-content {
+  background-color: #252934;
+  background-size: 100%;
+  height:100vh;
+  min-height:100vh;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 35px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  color: rgba(255,255,255,.70);
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: start;
+  align-items: auto;
+  align-content: start
+}
+
+.item {
+  flex: 0 0 auto;
+  margin: 10px;
+}
+
+
+.animated-text {
+  border-right: solid 3px rgba(0,255,0,.75);
+  white-space: nowrap;
+  overflow: hidden;    
+  font-family: 'Open Sans', sans-serif;
+  font-size: 35px;
+  color: rgba(255,255,255,.70);
+  margin: 0 auto;
+  height: 35px;
+}
+
+/* Animation */
+.animated-text {
+  animation: animated-text 1s steps(60,end) 0.5s 1 normal both,
+             animated-cursor 1000ms steps(29,end) infinite;
+}
+
+/* text animation */
+
+@keyframes animated-text{
+  from{width: 0;}
+  to{width: 435px;}
+}
+
+/* cursor animations */
+
+@keyframes animated-cursor{
+  from{border-right-color: rgba(255,255,255,.70);}
+  to{border-right-color: transparent;}
+}
+
+
+@media (max-width: 600px) {
+  .my-content {
+    font-size: 25px;
+  }
+  
+  .animated-text {
+    font-size: 25px;
+    height: 30px;
+  }
+
+  @keyframes animated-text{
+    from{width: 0;}
+    to{width: 280px;}
+  }
+}
