@@ -13,7 +13,9 @@ const IndexPage = () => (
   <Layout>
     <Helmet>
         {/* <script src={withPrefix('pts.min.js')} type="text/javascript" /> */}
-        {/* <script src={withPrefix('pts-animations.js')} type="text/javascript" /> */}
+        <script src={withPrefix('pts-animations.js')} type="text/javascript" />
+        <script src={'https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js'} type="text/javascript" />
+        {/* {<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>} */}
     </Helmet>
     {/* <SEO title="Home" /> */}
     {/* <h1>Hi people</h1>

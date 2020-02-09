@@ -2,7 +2,9 @@ import React from "react"
 
 import "./start-page.css"
 
-import {CanvasSpace, Pt, Group} from "pts"
+import Particles from 'react-particles-js';
+
+import { CanvasSpace, Pt, Group } from "pts"
 
 const StartPage = () => {
 
@@ -17,11 +19,19 @@ const StartPage = () => {
       >
         START PAGE
       </div> */}
+
+      {/* <div id="particles-js"></div> <div class="count-particles">
+        <span class="js-count-particles">--</span> particles
+      </div> */}
+
       <div id="pt" className="my-content">
         <div className="container">
-          <div className="item">Cześć, nazywam się <span style={{color: `#3d9df1`}}>Tomek</span></div>
-          <div className="item">Miło mi Ciebie tutaj gościć.</div>
+          <div className="item">Cześć, nazywam się <span style={{ color: `#3d9df1` }}>Tomek</span></div>
+          <div class="item">
+            <div className="animated-text">Miło mi Cię tutaj gościć.</div>
+          </div>
         </div>
+
       </div>
     </>
   )
