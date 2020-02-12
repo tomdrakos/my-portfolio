@@ -25,6 +25,26 @@
   margin: 10px;
 }
 
+.container-row {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row-reversed;
+  justify-content: center;
+  align-items: auto;
+  align-content: auto;
+  margin: 50px;;
+}
+.container-row:after {
+  display: block;
+  margin: 10px;
+  flex: 999 999 auto;
+}
+
+.item-row {
+  flex: 1 0 auto;
+  margin: 10px;
+}
+
 
 .animated-text {
   border-right: solid 3px rgba(0,255,0,.75);
@@ -56,7 +76,6 @@
   from{border-right-color: rgba(255,255,255,.70);}
   to{border-right-color: transparent;}
 }
-
 
 @media (max-width: 600px) {
   .my-content {
@@ -132,3 +151,35 @@ canvas {
 .count-particles {
 	border-radius: 0 0 3px 3px;
 }
+
+
+/* MAT */
+
+
+
+.button {
+  border: 2px solid whitesmoke;
+  box-sizing: inherit;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 18pt;
+  padding: 10px 20px;
+  transition: all 0.5s;
+  margin-top: 30px;;
+}
+.button:hover {
+  background-color: rgb(228, 48, 140);
+  border-color: rgb(228, 48, 140);
+}
+.button .mdi {
+  vertical-align: middle;
+}
+
+.bold {
+  font-family: "Raleway-bold";
+}
+
+
+
+
+/*# sourceMappingURL=style.css.map */
