@@ -38,6 +38,20 @@ window.demoDescription = "Nearest point demo in Op guide.";
 
 setTimeout(() => {
     animateText();
+
+    var config = {
+        reset: false,
+        // move: '50px',
+        // delay: 'always',
+        vFactor: 0.0, // requires 10% of an element be visible to trigger animation.
+        easing: 'ease-out',
+        // scale:    { direction: 'up', power: '0%' },
+        // viewport: document.getElementById('main'),
+        // viewport: document.getElementsByClassName('container'),
+        // viewport: document.getElementsByTagName('p'),
+        mobile: true
+      }
+      window.sr = new scrollReveal(config);
 }, 1000);
 
 

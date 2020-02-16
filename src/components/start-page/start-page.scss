@@ -105,7 +105,8 @@ body {
 
 .u-header {
   margin-bottom: 20px;
-  font-family: 'Open Sans', sans-serif;
+  // font-family: 'Open Sans', sans-serif;
+  font-family: 'Righteous', cursive;
   font-size: 65px;
 }
 
@@ -338,8 +339,8 @@ body {
   transition: all 0.5s;
 }
 .button:hover {
-  background-color: rgb(228, 48, 140);
-  border-color: rgb(228, 48, 140);
+  background-color: #7510F7;
+  border-color: #7510F7;
 }
 .button .mdi {
   vertical-align: middle;

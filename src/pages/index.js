@@ -21,6 +21,9 @@ const IndexPage = () => (
         {/* <script src={'https://github.com/tomdrakos/beatrice_html/blob/master/scripts/scrollReveal.min.js'} type="text/javascript" /> */}
         {/* <style src={'https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js'} type="text/css" /> */}
         {/* {<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>} */}
+
+        <style src={'https://fonts.googleapis.com/css?family=Righteous&display=swap'} type="text/css" />
+
     </Helmet>
     {/* <SEO title="Home" /> */}
     {/* <h1>Hi people</h1>
