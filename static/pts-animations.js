@@ -2,7 +2,7 @@
 // Copyright © 2017 William Ngan. (https://github.com/williamngan/pts)
 
 
-window.demoDescription = "Nearest point demo in Op guide.";
+// window.demoDescription = "Nearest point demo in Op guide.";
 
 //// Demo code starts (anonymous function wrapper is optional) ---
 
@@ -52,7 +52,7 @@ setTimeout(() => {
         mobile: true
       }
 
-      window.sr = new scrollReveal(config);
+      // window.sr = new scrollReveal(config);
 
       
 

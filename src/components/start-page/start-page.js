@@ -53,14 +53,13 @@ import VsStudioIcon from "./images/vsstudio"
 
 import SkillIcon from "./images/skill-icon"
 
-import ScrollReveal from "scrollreveal"
-// import $ from 'jquery';
+// import ScrollReveal from "scrollreveal"
 
 import p1 from "../../images/gallery/BLUE_small.png"
 import p2 from "../../images/gallery/DSC03804.jpg"
 import p3 from "../../images/gallery/DSC04335.jpg"
 import p4 from "../../images/gallery/DSC04485.jpg"
-import p5 from "../../images/gallery/DSC04493.JPG"
+//import p5 from "../../images/gallery/DSC04493.JPG"
 // import p6 from "../../images/gallery/IMG_20190324_150439_4.jpg"
 import p7 from "../../images/gallery/Untitled.jpg"
 import p8 from "../../images/gallery/IMG_20200318_194950-06.jpg"
@@ -141,11 +140,11 @@ const photos = [
     width: 4,
     height: 3,
   },
-  {
-    src: p5,
-    width: 4.7,
-    height: 3,
-  },
+  // {
+  //   src: p5,
+  //   width: 4.7,
+  //   height: 3,
+  // },
 ]
 
 function columns(containerWidth) {

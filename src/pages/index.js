@@ -17,7 +17,7 @@ const IndexPage = () => (
         <script src={withPrefix('pts-animations.js')} type="text/javascript" />
         <script src={'https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js'} type="text/javascript" />
         {/* <script src={'https://unpkg.com/scrollreveal'} type="text/javascript" /> */}
-        <script src={withPrefix('scrollreveal.min.js')} type="text/javascript" />
+        {/* <script src={withPrefix('scrollreveal.min.js')} type="text/javascript" /> */}
         {/* <script src={'https://github.com/tomdrakos/beatrice_html/blob/master/scripts/scrollReveal.min.js'} type="text/javascript" /> */}
         {/* <style src={'https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js'} type="text/css" /> */}
         {/* {<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>} */}
