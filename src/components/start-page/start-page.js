@@ -7,12 +7,24 @@ import React from "react"
 
 // import { CanvasSpace, Pt, Group } from "pts"
 
+// import { useStaticQuery, graphql } from "gatsby"
+
+import * as Scroll from "react-scroll"
+import {
+  Link,
+  Element,
+  Events,
+  animateScroll as scroll,
+  scrollSpy,
+  scroller,
+} from "react-scroll"
+
 import Gallery from "react-photo-gallery"
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
 import { library } from "@fortawesome/fontawesome-svg-core"
-import { fab } from "@fortawesome/free-brands-svg-icons"
+import { fab, faTwitter } from "@fortawesome/free-brands-svg-icons"
 import {
   faCheckSquare,
   faCoffee,
@@ -44,53 +56,138 @@ import SkillIcon from "./images/skill-icon"
 import ScrollReveal from "scrollreveal"
 // import $ from 'jquery';
 
-library.add(fab, faCheckSquare, faCoffee, faArrowRight)
+import p1 from "../../images/gallery/BLUE_small.png"
+import p2 from "../../images/gallery/DSC03804.jpg"
+import p3 from "../../images/gallery/DSC04335.jpg"
+import p4 from "../../images/gallery/DSC04485.jpg"
+import p5 from "../../images/gallery/DSC04493.jpg"
+// import p6 from "../../images/gallery/IMG_20190324_150439_4.jpg"
+import p7 from "../../images/gallery/Untitled.jpg"
+import p8 from "../../images/gallery/IMG_20200318_194950-06.jpg"
+import p9 from "../../images/gallery/IMG_20200326_203936-02.jpeg"
+import p10 from "../../images/gallery/IMG_20200326_205107-01.jpeg"
+
+import SocialIcons from "./social-icons"
+
+library.add(fab, faCheckSquare, faCoffee, faArrowRight, faTwitter)
+
+// const data = useStaticQuery(graphql`
+// query AssetsPhotos {
+//   allFile {
+//     edges {
+//       node {
+//         id
+//         dir
+//         name,
+//         childImageSharp {
+//           fixed {
+//              src
+//           }
+//         }
+//         # childImageSharp {
+//         #   fluid(maxWidth: 300) {
+//         #     ...GatsbyImageSharpFluid
+//         #   }
+//         # }
+//       }
+//     }
+//   }
+// }
+//   `)
 
 const photos = [
   {
-    src: "https://images.pexels.com/photos/1236701/pexels-photo-1236701.jpeg",
-    width: 3,
-    height: 4,
+    src: p1,
+    width: 5.5,
+    height: 3,
   },
   {
-    src: "https://images.pexels.com/photos/1236702/pexels-photo-1236702.jpeg",
-    width: 1,
-    height: 1,
+    src: p2,
+    width: 4.5,
+    height: 3,
   },
   {
-    src: "https://images.pexels.com/photos/1236703/pexels-photo-1236703.jpeg",
-    width: 3,
-    height: 4,
+    src: p3,
+    width: 4.5,
+    height: 3,
   },
   {
-    src: "https://images.pexels.com/photos/1236704/pexels-photo-1236704.jpeg",
-    width: 3,
+    src: p4,
+    width: 6,
     height: 4,
   },
+  // {
+  //   src: p6,
+  //   width: 4,
+  //   height: 3,
+  // },
   {
-    src: "https://images.pexels.com/photos/1236705/pexels-photo-1236705.jpeg",
-    width: 3,
-    height: 4,
+    src: p7,
+    width: 5,
+    height: 3,
+  },
+  {
+    src: p8,
+    width: 4,
+    height: 3,
+  },
+  {
+    src: p9,
+    width: 4,
+    height: 3,
+  },
+  {
+    src: p10,
+    width: 4,
+    height: 3,
+  },
+  {
+    src: p5,
+    width: 4.7,
+    height: 3,
   },
 ]
 
+function columns(containerWidth) {
+  let columns = 1
+  if (containerWidth >= 500) columns = 2
+  if (containerWidth >= 900) columns = 3
+  return columns
+}
+
 const StartPage = () => {
+  const goToPersonalInfo = () => {
+    scroller.scrollTo("scroll-to-pinfo", {
+      duration: 1200,
+      delay: 0,
+      smooth: "easeInOutQuart",
+      offset: -100,
+    })
+  }
+
   return (
     <>
       <div id="pt" className="my-content u-margin-bottom-big">
-        <a className="logo" href="/">
-          <img src={Logo} alt="Logo"></img>
-        </a>
+        <div className="nav">
+          <a className="logo" href="/">
+            <img src={Avatar} alt="Logo"></img>
+          </a>
+          <SocialIcons />
+        </div>
+
         <div className="container column">
           <div className="item">
-            {/* <span style={{ color: `#7510F7` }}>Tomek</span> */}
             <span style={{ color: `#7510F7` }}>Cześć, co u Ciebie? </span>
           </div>
           <div className="item">
             <div className="animated-text">Miło mi, że tutaj zajrzałeś.</div>
           </div>
           <div className="item">
-            <div className="button page-link" dest="about">
+            <div
+              className="button page-link"
+              dest="about"
+              onClick={goToPersonalInfo}
+            >
               Trochę o mnie{" "}
               <i className="">
                 <FontAwesomeIcon
@@ -103,31 +200,19 @@ const StartPage = () => {
           </div>
         </div>
       </div>
-      {/* <div className="centered">
-        <div className="container flex">
-          <div className="gray u-text u-text-big u-header" data-sr="enter left move 400px over 1.5s wait 0.3s">O mnie</div>
-          <div className="gray u-header-underline" data-sr="enter left move 400px over 1.5s wait 0.8s"></div>
+      <Element name="scroll-to-pinfo" className="element">
+        <div className="container content-center violet-main-background">
+          <section id="pinfo" className="flex section">
+            <h2>Mam na imię Tomek i jestem full stack developerem.</h2>
+            <div>
+              Kilka technologi oraz narzędzi z którymi miałem okazję pracować.{" "}
+            </div>
+          </section>
         </div>
-      </div> */}
-      <div className="container content-center violet-main-background">
-        {/* <div className="gray u-text u-text-big u-header" data-sr="enter left move 400px over 1.5s wait 0.3s">O mnie</div> */}
-        {/* <div className="gray u-header-underline" data-sr="enter left move 400px over 1.5s wait 0.8s"></div> */}
-        <section className="flex section">
-        
-          <h2>Hej, mam na imię Tomek i jestem full stack developerem.</h2>
-          <div>Kilka technologi oraz narzędzi z którymi miałem okazję pracować i wiem z czym to się jje :) </div>
-        </section>
-      </div>
-
+      </Element>
       <div className="is-narrow personal-info">
         <div className="left">
-          <img
-            class="larger"
-            style={{ maxWidth: "25%" }}
-            src={Avatar}
-            alt="RestApi"
-            data-sr="enter bottom move 50px over 1.5s wait 1.2s"
-          ></img>
+          <img className="second-logo" src={Avatar} alt="Avatar "></img>
         </div>
         <div className="right">
           <div className="container-row skills-bg">
@@ -166,38 +251,33 @@ const StartPage = () => {
             </SkillIcon>
             {/* TeamCity */}
             <div className="item-row" data-sr="enter right over 0.5s wait 0.7s">
-              <div style={{ width: 100, height: 100 }}>
+              <div>
                 <img class="larger" src={TeamCityIcon} alt="TeamCity"></img>
               </div>
             </div>
             {/* Rest */}
             <div className="item-row" data-sr="enter right over 0.5s wait 0.7s">
-              <div style={{ width: 100, height: 100 }}>
+              <div>
                 <img class="larger" src={RestApiIcon} alt="RestApi"></img>
               </div>
             </div>
           </div>
         </div>
       </div>
-      {/* <div>
-        sskflsdjfsdljk
-        <div style={{ backgroundImage: `url(${PathBcg})` }} />
-      </div> */}
-      
-      
-      <div className="container content-center violet-main-background">
-        {/* <div className="gray u-text u-text-big u-header" data-sr="enter left move 400px over 1.5s wait 0.3s">O mnie</div> */}
-        {/* <div className="gray u-header-underline" data-sr="enter left move 400px over 1.5s wait 0.8s"></div> */}
+
+      <div className="container content-center violet-main-background small">
         <section className="flex section">
-        
-          <h2>W wolnych chwilach lapie za apart i chwytam mome.</h2>
+          <h2>
+            W wolnych chwilach łapie za aparat i staram się co wypstrykać.
+          </h2>
           <div style={{ width: 200, height: 200 }}>
-                <img class="larger" src={Camera} alt="Camera"></img>
-              </div>
+            <img class="larger" src={Camera} alt="Camera"></img>
+          </div>
         </section>
       </div>
-      
-      <Gallery photos={photos} />
+      <div className="gallery-wrapper">
+        <Gallery photos={photos} direction="column" columns={columns} />
+      </div>
     </>
   )
 }

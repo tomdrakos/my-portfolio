@@ -1,51 +1,6 @@
 
 
-.animated-text {
-  border-right: solid 3px rgba(0,255,0,.75);
-  white-space: nowrap;
-  overflow: hidden;    
-  font-family: 'Open Sans', sans-serif;
-  font-size: 35px;
-  color: rgba(255,255,255,.70);
-  margin: 0 auto;
-  height: 35px;
-}
 
-/* Animation */
-.animated-text {
-  animation: animated-text 1s steps(60,end) 0.5s 1 normal both,
-             animated-cursor 1000ms steps(29,end) infinite;
-}
-
-/* text animation */
-
-@keyframes animated-text{
-  from{width: 0;}
-  to{width: 435px;}
-}
-
-/* cursor animations */
-
-@keyframes animated-cursor{
-  from{border-right-color: rgba(255,255,255,.70);}
-  to{border-right-color: transparent;}
-}
-
-@media (max-width: 600px) {
-  .my-content {
-    font-size: 25px;
-  }
-  
-  .animated-text {
-    font-size: 25px;
-    height: 30px;
-  }
-
-  @keyframes animated-text{
-    from{width: 0;}
-    to{width: 280px;}
-  }
-}
 
 
 canvas {
@@ -109,8 +64,6 @@ canvas {
 
 /* MAT */
 
-
-
 .button {
   border: 2px solid whitesmoke;
   box-sizing: inherit;
@@ -121,19 +74,6 @@ canvas {
   transition: all 0.5s;
   margin-top: 30px;;
 }
-.button:hover {
-  background-color: rgb(228, 48, 140);
-  border-color: rgb(228, 48, 140);
-}
-.button .mdi {
-  vertical-align: middle;
-}
-
-.bold {
-  font-family: "Raleway-bold";
-}
-
-
 
 
 /*# sourceMappingURL=style.css.map */

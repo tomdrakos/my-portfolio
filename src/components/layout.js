@@ -11,6 +11,14 @@ import { useStaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
 import "./layout.css"
+import PathBcg from "../images/path_bcg4.png"
+import WavesSvg from "../images/waves.svg"
+
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { library } from "@fortawesome/fontawesome-svg-core"
+import { fab, faTwitter } from "@fortawesome/free-brands-svg-icons"
+
+library.add(faTwitter)
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -27,19 +35,25 @@ const Layout = ({ children }) => {
     <>
       {/* <Header siteTitle={data.site.siteMetadata.title} /> */}
       <div
-        // style={{
-        //   margin: `0 auto`,
-        //   maxWidth: 960,
-        //   padding: `0 1.0875rem 1.45rem`,
-        // }}
+      // style={{
+      //   margin: `0 auto`,
+      //   maxWidth: 960,
+      //   padding: `0 1.0875rem 1.45rem`,
+      // }}
       >
-        <main>
-          {children}
-        </main>
+        <main>{children}</main>
+        <div style={{position: "relative"}}>
+          {/* <div class="ocean">
+            <div class="wave"></div>
+            <div class="wave"></div>
+          </div> */}
+        </div>
+
+        
         <footer>
-          © {new Date().getFullYear()}, Built with
+        <img src={PathBcg} alt="Path" style={{marginBottom: -10}}></img> 
+          © {new Date().getFullYear()}, Tomasz Ponikowski
           {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
         </footer>
       </div>
     </>

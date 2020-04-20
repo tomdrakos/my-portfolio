@@ -51,7 +51,11 @@ setTimeout(() => {
         // viewport: document.getElementsByTagName('p'),
         mobile: true
       }
+
       window.sr = new scrollReveal(config);
+
+      
+
 }, 1000);
 
 
