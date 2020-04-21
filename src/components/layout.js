@@ -5,7 +5,7 @@
  * See: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-import React from "react"
+import React, { useState, useEffect } from 'react';
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
@@ -18,44 +18,57 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { library } from "@fortawesome/fontawesome-svg-core"
 import { fab, faTwitter } from "@fortawesome/free-brands-svg-icons"
 
+import Avatar from "../images/face_avatar2.png"
+
+
 library.add(faTwitter)
 
+
 const Layout = ({ children }) => {
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `)
+  // const data = useStaticQuery(graphql`
+  //   query SiteTitleQuery {
+  //     site {
+  //       siteMetadata {
+  //         title
+  //       }
+  //     }
+  //   }
+  // `)
+
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setIsLoading(false);
+    }, 3500);
+    
+  }, [])
 
   return (
     <>
       {/* <Header siteTitle={data.site.siteMetadata.title} /> */}
-      <div
-      // style={{
-      //   margin: `0 auto`,
-      //   maxWidth: 960,
-      //   padding: `0 1.0875rem 1.45rem`,
-      // }}
-      >
-        <main>{children}</main>
-        <div style={{position: "relative"}}>
-          {/* <div class="ocean">
-            <div class="wave"></div>
-            <div class="wave"></div>
-          </div> */}
-        </div>
+      
 
-        
+      {isLoading && (
+        <div className="loading-screen">
+           <a className="logo spinit" href="/">
+            <img src={Avatar} alt="Logo"></img>
+          </a>
+        </div>
+      )}
+      
+
+      {!isLoading && (
+        <main>{children}</main>
+      )}
+
+      {!isLoading && (
         <footer>
         <img src={PathBcg} alt="Path" style={{marginBottom: -10}}></img> 
           © {new Date().getFullYear()}, Tomasz Ponikowski
           {` `}
         </footer>
-      </div>
+      )}
     </>
   )
 }
