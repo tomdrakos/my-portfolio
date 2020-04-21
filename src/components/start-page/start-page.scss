@@ -1,4 +1,3 @@
-$duration: .20;
 $easing: ease-in-out;
 $light-violet: #720ff108;
 $main-violet: #7510F7;
@@ -77,16 +76,6 @@ body {
   flex-grow: 0
 }
 
-
-
-// .u-text {
-//   font-family: 'Open Sans', sans-serif;
-
-//   &-big{
-//     font-size: 65px;
-//   }
-// }
-
 .u-header-underline {
   background: #445561;
   height: 4px;
@@ -113,7 +102,7 @@ body {
 }
 
 .logo {
-  max-width: 8%;
+  max-width: 5%;
   top: 10px;
   left: 10px;
 }
@@ -343,59 +332,16 @@ body {
 
 
 
-@font-face {
-  font-family: "Raleway";
-  src: url("http://findmatthew.com/style/../fonts/Raleway-Regular.ttf");
-}
-@font-face {
-  font-family: "Raleway-semibold";
-  src: url("http://findmatthew.com/style/../fonts/Raleway-SemiBold.ttf");
-}
-@font-face {
-  font-family: "Raleway-bold";
-  src: url("http://findmatthew.com/style/../fonts/Raleway-Bold.ttf");
-}
-@keyframes fadeIn {
-  100% {
-    opacity: 1;
-  }
-}
-
 body {
-  // color: #fff;
-  // font-family: "Raleway";
-  // font-size: 8pt;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  // margin: 0px;
-  // overflow-x: hidden;
-  // text-align: center;
 }
 
 #preload {
   display: none;
 }
 
-.page-link {
-  cursor: pointer;
-}
 
-.disable-hover {
-  pointer-events: none;
-}
-
-.overflow-wrap {
-  overflow-x: hidden;
-}
-
-.canvas {
-  background: url("http://findmatthew.com/style/../img/filler.png") center center/cover;
-  height: 100%;
-  left: 0;
-  position: absolute;
-  top: 0;
-  width: 100vw;
-}
 
 .button {
   border: 2px solid #fff;
@@ -409,13 +355,6 @@ body {
 .button:hover {
   background-color: #7510F7;
   border-color: #7510F7;
-}
-.button .mdi {
-  vertical-align: middle;
-}
-
-.bold {
-  font-family: "Raleway-bold";
 }
 
 .flex {
@@ -431,14 +370,6 @@ body {
   flex-wrap: wrap;
 }
 
-.hex-wrap {
-  display: inline-block;
-  height: 80px;
-  position: relative;
-  text-align: center;
-  width: 80px;
-}
-
 footer {
   background: $third-violet;
   padding: 0px 0 50px 0;
@@ -446,66 +377,6 @@ footer {
   color: white;
   margin-top: 5em;
 }
-footer .mdi-chevron-double-up {
-  background: #e31b6d;
-  cursor: pointer;
-  font-size: 30pt;
-  height: 50px;
-  left: 0;
-  line-height: 40pt;
-  margin: 0 auto;
-  position: absolute;
-  right: 0;
-  top: -25px;
-  transition: background 0.5s;
-  width: 47px;
-}
-footer .mdi-chevron-double-up:hover {
-  background: #fb1f79;
-}
-footer .icon-wrap .icon {
-  background: #262f38;
-  cursor: pointer;
-  font-size: 18pt;
-  height: 55px;
-  margin: 0 15px;
-  overflow: hidden;
-  position: relative;
-  text-align: center;
-  transition: background 0.3s, color 0.3s, box-shadow 0.3s, transform 0.3s;
-  width: 55px;
-}
-footer .icon-wrap .mdi {
-  color: #fff;
-  text-align: center;
-}
-footer .icon-wrap .mdi.mdi-codepen {
-  font-size: 20pt;
-}
-footer .icon-wrap .icon:hover {
-  background: #04c2c9;
-  box-shadow: 0 0 0 3px rgba(4, 94, 201, 0.1);
-  transform: scale(0.9);
-}
-footer .icon-wrap .icon:hover .mdi {
-  color: #fff;
-}
-footer .icon-wrap .icon:hover .mdi {
-  -webkit-animation: toBottomFromTop 0.3s forwards;
-  -moz-animation: toBottomFromTop 0.3s forwards;
-  animation: toBottomFromTop 0.3s forwards;
-}
-footer .footnote {
-  color: #8f9aa7;
-  font-size: 10pt;
-  margin-top: 35px;
-  opacity: 0.6;
-}
-footer .footnote .highlight {
-  color: #e31b6d;
-  font-family: "Open Sans";
-}
-
   .button {
     font-size: 16pt;
   }
@@ -564,6 +435,10 @@ footer .footnote .highlight {
 @media #{$screen-max-1440p} {
   .violet-main-background {
     max-width: 95%;
+  }
+
+  .logo {
+    max-width: 8%;
   }
 }
 

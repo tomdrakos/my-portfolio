@@ -6,6 +6,8 @@ $color-white: #FFFBFA;
 
 $color-black: #191308;
 
+$color-primary-gray: #252934;
+
 .wrapper {
   display: flex;
   transition: all .4s ease-out;
@@ -44,12 +46,12 @@ $color-black: #191308;
     & .social-group {
 
       &__icon {
-        fill: $color-black;
+        fill: $color-primary-gray;
         transition: all .2s;
       }
 
       &__inner-circle {
-        fill: transparent;
+        fill: #eee;
         transition: all .2s;
       }
 
