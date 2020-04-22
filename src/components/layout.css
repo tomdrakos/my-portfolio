@@ -649,6 +649,18 @@ html, body {
   src: url("../../static/fonts/Rubik/Rubik-Regular.ttf")  format("truetype");
 } 
 
+
+.loading-screen > .logo {
+  max-width: 10% !important;
+  
+}
+
+@media only screen and (max-width : 900px) {
+  .loading-screen > .logo {
+    max-width: 35% !important;
+  }
+} 
+
 .loading-screen {
   flex: 1;
   display:flex;
@@ -658,10 +670,6 @@ html, body {
   background-color: #252934;
 }
 
-.loading-screen > .logo {
-  max-width: 10% !important;
-  
-}
 
 .glyphicon{
   font-size: 200px;
