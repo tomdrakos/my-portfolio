@@ -195,6 +195,7 @@ const StartPage = () => {
                   icon="arrow-right"
                   inverse
                   transform="shrink-3"
+                  style={{color:"rgba(255, 255, 255, 0.7)"}}
                 />
               </i>
             </div>
