@@ -62,7 +62,7 @@ const Layout = ({ children }) => {
       <div class="footer" style={{display: isLoading ? 'none' : 'block'}}>
         <div style={{paddingBottom: '80px', backgroundColor: 'white'}}></div>
           <div  className="footer-background">
-            <span style={{color: 'white'}}>© {new Date().getFullYear()} Tomasz Ponikowski</span>
+            <span style={{color: 'white', 'marginBottom': '10px'}}>© {new Date().getFullYear()} Tomasz Ponikowski</span>
             <span><SocialIcons /></span>  
         </div>
       </div>
