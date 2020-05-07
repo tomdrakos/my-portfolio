@@ -11,7 +11,7 @@ import { useStaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
 import "./layout.css"
-import PathBcg from "../images/path_bcg4.png"
+import PathBcg from "../images/Path 23.png"
 import WavesSvg from "../images/waves.svg"
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
@@ -19,6 +19,8 @@ import { library } from "@fortawesome/fontawesome-svg-core"
 import { fab, faTwitter } from "@fortawesome/free-brands-svg-icons"
 
 import Avatar from "../images/face_avatar2.png"
+
+import SocialIcons from "./start-page/social-icons"
 
 
 library.add(faTwitter)
@@ -47,7 +49,6 @@ const Layout = ({ children }) => {
   return (
     <>
       {/* <Header siteTitle={data.site.siteMetadata.title} /> */}
-      
 
       {isLoading && (
         <div className="loading-screen">
@@ -57,18 +58,28 @@ const Layout = ({ children }) => {
         </div>
       )}
       
-
-      {!isLoading && (
-        <main>{children}</main>
-      )}
-
-      {!isLoading && (
-        <footer>
-        <img src={PathBcg} alt="Path" style={{marginBottom: -10}}></img> 
-          © {new Date().getFullYear()}, Tomasz Ponikowski
-          {` `}
-        </footer>
-      )}
+      <main style={{display: isLoading ? 'none' : 'block'}}>{children}</main>
+      <div class="footer" style={{display: isLoading ? 'none' : 'block'}}>
+        <div style={{paddingBottom: '80px', backgroundColor: 'white'}}></div>
+          <div  className="footer-background">
+            <span style={{color: 'white'}}>© {new Date().getFullYear()} Tomasz Ponikowski</span>
+            <span><SocialIcons /></span>  
+        </div>
+      </div>
+      
+      {/* <div style={{position: 'relative'}}>
+      <div style={{position: 'absolute', top: '50%', left: '50%', color: 'white'}}>© {new Date().getFullYear()}  
+          <span style={{color: 'white'}}> Tomasz Ponikowski</span> 
+          <SocialIcons />
+        </div>
+        <img src={PathBcg} alt="Path" style={{marginBottom: -10, backgroundColor: 'white', maxWidth: '400%'}}></img> 
+      </div>
+       */}
+      {/* <footer style={{display: isLoading ? 'none' : 'block'}}>
+      <img src={PathBcg} alt="Path" style={{marginBottom: -10, backgroundColor: 'white'}}></img> 
+        © {new Date().getFullYear()}, Tomasz Ponikowski
+        {` `}
+      </footer> */}
     </>
   )
 }

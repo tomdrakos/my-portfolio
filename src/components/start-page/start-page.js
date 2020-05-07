@@ -176,7 +176,9 @@ const StartPage = () => {
 
         <div className="container column">
           <div className="item">
-            <span style={{ color: `#7510F7` }}>Cześć, co u Ciebie? </span>
+          <h1><span style={{ color: `#7510F7`}}>Cześć, co u Ciebie? </span></h1>
+          {/* <span style={{ color: `#7510F7`}}>Cześć, co u Ciebie? </span> */}
+            
           </div>
           <div className="item">
             <div className="animated-text">Miło mi, że tutaj zajrzałeś.</div>
@@ -199,6 +201,8 @@ const StartPage = () => {
           </div>
         </div>
       </div>
+
+      {/* <div className="spacer"></div> */}
       <Element name="scroll-to-pinfo" className="element">
         <div className="container content-center violet-main-background">
           <section id="pinfo" className="flex section">
